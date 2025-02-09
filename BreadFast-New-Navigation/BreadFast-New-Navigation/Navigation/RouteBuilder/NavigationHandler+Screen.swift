@@ -20,7 +20,7 @@ extension NavCoordinator {
         case .merchant:
             MerchantView()
         case .smartScreen(let name):
-            SmartScreenView(addName: name)
+            SmartScreenView(shopName: name)
         case .shops:
             ShopsView()
         

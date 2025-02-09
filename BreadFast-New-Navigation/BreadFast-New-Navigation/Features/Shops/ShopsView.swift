@@ -11,7 +11,34 @@ struct ShopsView: View {
     @EnvironmentObject var navCoordinator: NavCoordinator
 
     var body: some View {
-        Text("This is Shops")
+        VStack(spacing: 20) {
+            // Title
+            Text("🛍️ Welcome to Shops")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            Text("Browse and manage all available shops.")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            
+            Spacer()
+            
+            // Navigation Button
+            Button {
+                navCoordinator.push(.smartScreen(name: "I came from Merchant Tab/Shops View"))
+            } label: {
+                Text("➡️ Go to Smart Screen")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+            }
+
+            Spacer()
+        }
+        .padding()
+        .navigationTitle("Shops")
     }
 }
 

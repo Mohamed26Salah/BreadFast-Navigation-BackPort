@@ -11,16 +11,34 @@ struct HomeView: View {
     @EnvironmentObject var navCoordinator: NavCoordinator
     
     var body: some View {
-        VStack {
-            Text("This is Home Root View")
+        VStack(spacing: 20) {
+            // Title
+            Text("🏠 Home Dashboard")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            Text("Manage and explore the app from here.")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            
+            Spacer()
+            
+            // Navigation Button
             Button {
-                navCoordinator.push(.smartScreen(name: ""))
+                navCoordinator.push(.smartScreen(name: "Navigated from Home View"))
             } label: {
-                Text("Navigate to Smart Screen")
+                Text("➡️ Go to Smart Screen")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
             }
+
+            Spacer()
         }
+        .padding()
         .navigationTitle("Home")
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AB759A3C2D58B58700A5B4EE /* NavigationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = AB759A3B2D58B58700A5B4EE /* NavigationBackport */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AB7599F42D58B55700A5B4EE /* BreadFast-New-Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BreadFast-New-Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB759A3C2D58B58700A5B4EE /* NavigationBackport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "BreadFast-New-Navigation";
 			packageProductDependencies = (
+				AB759A3B2D58B58700A5B4EE /* NavigationBackport */,
 			);
 			productName = "BreadFast-New-Navigation";
 			productReference = AB7599F42D58B55700A5B4EE /* BreadFast-New-Navigation.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = AB7599EB2D58B55700A5B4EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AB759A3A2D58B58700A5B4EE /* XCRemoteSwiftPackageReference "NavigationBackport" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AB7599F52D58B55700A5B4EE /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB759A3A2D58B58700A5B4EE /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB759A3B2D58B58700A5B4EE /* NavigationBackport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB759A3A2D58B58700A5B4EE /* XCRemoteSwiftPackageReference "NavigationBackport" */;
+			productName = NavigationBackport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB7599EC2D58B55700A5B4EE /* Project object */;
 }

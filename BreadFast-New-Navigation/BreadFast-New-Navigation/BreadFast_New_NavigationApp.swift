@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct BreadFast_New_NavigationApp: App {
+    @StateObject var appState: AppState = AppState()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BottomTabsView()
+                .environmentObject(appState)
         }
     }
 }
